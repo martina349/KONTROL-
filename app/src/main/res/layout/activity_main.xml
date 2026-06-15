@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020617"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="17dp"
+        android:paddingBottom="130dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_blue"
+            android:padding="22dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚡ KONTROL"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La tua bolletta diventa chiara, leggibile e ottimizzabile"
+                android:textColor="#E0F2FE"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAnalizza"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="📸 SCATTA E ANALIZZA BOLLETTA"
+            android:textStyle="bold"
+            android:textColor="#020617"
+            android:backgroundTint="#67E8F9"
+            android:layout_marginBottom="13dp" />
+
+        <TextView
+            android:id="@+id/txtRisultati"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📄 Nessuna bolletta analizzata&#10;&#10;Inquadra bene il documento: KONTROL leggerà il testo con OCR reale."
+            android:textColor="#E2E8F0"
+            android:textSize="14sp"
+            android:background="@drawable/card_dark"
+            android:padding="18dp"
+            android:lineSpacingExtra="7dp"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutBenvenuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_dark"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📈 Cosa può fare KONTROL"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ Analizza bollette luce&#10;🔥 Analizza bollette gas&#10;📸 OCR automatico&#10;🏆 Eco Score intelligente&#10;💰 Simulazione risparmio"
+                    android:textColor="#CBD5E1"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_green"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏆 Obiettivo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Analizza la tua prima bolletta e scopri quanto puoi risparmiare ogni anno."
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_dark"
+            android:padding="18dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Dashboard bolletta"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:id="@+id/txtHeroRisparmio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📉 Risparmio potenziale&#10;€ 0,00 / mese"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/card_green"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtCardLuce"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="#0F172A"
+                    android:gravity="center"
+                    android:text="⚡ Luce&#10;--"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/txtCardGas"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="#0F172A"
+                    android:gravity="center"
+                    android:text="🔥 Gas&#10;--"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/txtCardImporto"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="#0F172A"
+                    android:gravity="center"
+                    android:text="💰 Importo&#10;--"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/txtCardCodici"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="#0F172A"
+                    android:gravity="center"
+                    android:text="🔐 Codici&#10;--"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#CBD5E1"
+                android:textSize="14sp"
+                android:lineSpacingExtra="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📈 Trend consumi"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp" />
+
+            <ProgressBar
+                android:id="@+id/progressConsumi"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:max="100"
+                android:progress="0"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/txtEcoScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏆 ECO SCORE: --"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/card_green"
+                android:padding="16dp"
+                android:layout_marginTop="14dp" />
+
+            <TextView
+                android:id="@+id/txtClasseEnergetica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏠 Classe Energetica Stimata: --"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/card_green"
+                android:padding="12dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#0F172A"
+                android:padding="18dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔥 Top Spreco Rilevato"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stand-by dispositivi"
+                    android:textColor="#FFD54F"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incidenza stimata: 12%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSimulatore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_dark"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏠 Simulatore casa intelligente"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinnerDispositivi"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#CBD5E1"
+                android:padding="10dp"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:id="@+id/txtTarget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Utilizzi ottimizzati a settimana: 0"
+                android:textColor="#E2E8F0"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <SeekBar
+                android:id="@+id/seekBarRisparmio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="14"
+                android:progress="0"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:id="@+id/txtConsiglio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleziona un’opzione per visualizzare il consiglio."
+                android:textColor="#FDE68A"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#9A3412"
+                android:padding="14dp"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginBottom="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_green"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RISPARMIO STIMATO"
+                    android:textColor="#D1FAE5"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txtRisparmio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="€ 0,00 / mese"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/txtRisparmioAnno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="€ 0,00 / anno"
+                    android:textColor="#BBF7D0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/txtRisparmio5Anni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💰 € 0,00 in 5 anni"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
